@@ -1,0 +1,5 @@
+====== S'ha trobat un esborrany ======
+
+La darrera sessió vostra d'edició d'esta pàgina no es va completar correctament. DokuWiki en va alçar automàticament un esborrany mentre treballàveu, el qual podeu utilitzar ara per continuar l'edició. Més avall podeu vore la data i hora en què es va alçar durant la vostra darrera sessió.
+
+Decidiu si voleu //recuperar// la vostra darrera sessió d'edició, //suprimir// l'esborrany que es va alçar automàticament o //cancel·lar// el procés d'edició.

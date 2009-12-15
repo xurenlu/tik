@@ -1,0 +1,3 @@
+====== Nova contrasenya ======
+
+Per sol·licitar una nova contrasenya, introduïu el vostre nom d'usuari en el formulari següent. Se vos enviarà un enllaç de confirmació a l'adreça de correu amb què vos vau registrar.

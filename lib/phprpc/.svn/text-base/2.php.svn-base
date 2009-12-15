@@ -1,0 +1,43 @@
+<?php
+include "./phprpc_client.php";
+ $rpc_client = new PHPRPC_Client();
+ $rpc_client->setProxy(NULL);
+ $rpc_client->useService('http://w02.pdb.cnb:8020/');
+ $rpc_client->setKeyLength(1024);
+ $rpc_client->setEncryptMode(3);
+
+ 
+ $db="./data25";
+print_r($rpc_client->cnseg("是一个轻型的、安全的、跨网际的、跨语言的、跨平台的、跨环境的、跨域的、支持复杂对象传输的、支持引用参数传递的、支持内容输出重定向的、支持分级错误处理的、支持会话的、面向服务的高性能远程过程调用协议。"));
+
+print_r($rpc_client->create_index($db,array("text","author","name"),array("text","author","name"),array()));
+$str="是一个轻型的、安全的、跨网际的、跨语言的、跨平台的、跨环境的、跨域的、支持复杂对象传输的、支持引用参数传递的、支持内容输出重定向的、支持分级错误处理的、支持会话的、面向服务的高性能远程过程调用协议。I am a good boy,you are not";
+ $book1=array(
+     "text"=>$str,
+     "author"=>"徐仁禄",
+     "name"=>"文学1"
+ );
+$book2=array(
+    "text"=>"jojo",
+    "author"=>"ma",
+    "name"=>"goto"
+);
+print_r($rpc_client->index_data($db,"book1",$book1,array("text","author")));
+print_r($rpc_client->index_data($db,"book2",$book2,array("text","author")));
+print_r($rpc_client->get_document($db,"book1"));
+print_r($rpc_client->get_document($db,"book2"));
+print_r($rpc_client->search($db,"good",0,10));
+print_r($rpc_client->search($db,"hello",0,10));
+print_r($rpc_client->search($db,"world",0,10));
+print_r($rpc_client->search($db,"not",0,10));
+print_r($rpc_client->search($db,"are",0,10));
+print_r($rpc_client->search($db,"复杂",0,10));
+print_r($rpc_client->search($db,"轻型",0,10));
+ /**
+ print_r($rpc_client->search($db,"徐",0,10));
+ print_r($rpc_client->search($db,"狗",0,10));
+ print_r($rpc_client->search($db,"文",0,10));
+ print_r($rpc_client->search($db,"hello",0,10));
+ print_r($rpc_client->search($db,"文学",0,10));
+  */
+print_r($rpc_client->count($db));
